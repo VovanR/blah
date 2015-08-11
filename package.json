@@ -33,7 +33,7 @@
     "tdd": "mocha --watch",
     "test": "mocha",
     "lint": "npm run jslint; npm run jscs",
-    "jslint": "jshint --reporter ./node_modules/jshint-stylish/stylish.js ./src/*.js ./test/*.js",
+    "jslint": "jshint --reporter ./node_modules/jshint-stylish ./src/*.js ./test/*.js",
     "jscs": "jscs ./src/*.js ./test/*.js",
     "uglify:dist": "uglifyjs ./src/index.js -o ./dist/blah.min.js",
     "uglify": "npm run uglify:dist",
