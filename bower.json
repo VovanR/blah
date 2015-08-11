@@ -1,0 +1,37 @@
+{
+  "name": "blah",
+  "description": "",
+  "version": "0.0.0",
+  "author": "Vladimir Rodkin <mail@vovanr.com>",
+  "keywords": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VovanR/blah"
+  },
+  "main": [
+    "dist"
+  ],
+  "ignore": [
+    "package.json",
+    "node_modules",
+    "**/.*",
+    "test",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/VovanR/blah/issues"
+  },
+  "homepage": "https://github.com/VovanR/blah",
+  "license": "MIT",
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
+  ],
+  "private": false
+}
