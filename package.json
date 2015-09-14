@@ -3,8 +3,7 @@
   "description": "",
   "version": "0.0.0",
   "author": "Vladimir Rodkin <mail@vovanr.com>",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/VovanR/blah"
@@ -26,21 +25,17 @@
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postpublish": "git push --follow-tags",
-    "prepush": "npm test; npm run lint",
-    "precommit": "npm test; npm run lint",
+    "prepush": "npm test",
+    "precommit": "npm test",
     "precoveralls": "npm run coverage",
-    "prepush": "npm test; npm run lint",
     "tdd": "mocha --watch",
-    "test": "mocha",
-    "lint": "npm run jslint; npm run jscs",
-    "jslint": "jshint --reporter ./node_modules/jshint-stylish ./src/*.js ./test/*.js",
-    "jscs": "jscs ./src/*.js ./test/*.js",
+    "test": "xo && mocha",
     "uglify:dist": "uglifyjs ./src/index.js -o ./dist/blah.min.js",
     "uglify": "npm run uglify:dist",
     "clean": "rm -rf ./dist && mkdir ./dist",
     "copy:dist": "cp ./src/index.js ./dist/blah.js",
     "copy": "npm run copy:dist",
-    "build:js": "npm run lint && npm run uglify",
+    "build:js": "npm test && npm run uglify",
     "build": "npm run clean && npm run copy && npm run build:js"
   },
   "devDependencies": {
@@ -48,14 +43,11 @@
     "coveralls": "^2.11.2",
     "husky": "^0.8.1",
     "istanbul": "^0.3.11",
-    "jscs": "^1.13.1",
-    "jscs-jsdoc": "^1.0.1",
-    "jshint": "^2.8.0",
-    "jshint-stylish": "^2.0.0",
     "mocha": "^2.2.5",
     "mocha-lcov-reporter": "0.0.2",
     "sinon": "^1.14.1",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "xo": "^0.9.0"
   },
   "bugs": {
     "url": "https://github.com/VovanR/blah/issues"
