@@ -1,24 +1,17 @@
 {
   "name": "blah",
-  "description": "",
   "version": "0.0.0",
-  "author": "Vladimir Rodkin <mail@vovanr.com>",
-  "keywords": [],
+  "description": "",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VovanR/blah.git"
+    "url": "git+https://github.com/VovanR/blah.git"
+  },
+  "author": "Vladimir Rodkin <mail@vovanr.com> (http://vovanr.com/)",
+  "engines": {
+    "node": ">=0.10.0"
   },
   "main": "./dist/blah.js",
-  "files": [
-    "dist",
-    "src",
-    "LICENSE",
-    "README.md",
-    "package.json"
-  ],
-  "engines": {
-    "node": ""
-  },
   "scripts": {
     "coverage": "istanbul cover _mocha --",
     "coveralls": "coveralls < coverage/lcov.info",
@@ -38,6 +31,19 @@
     "build:js": "npm test && npm run uglify",
     "build": "npm run clean && npm run copy && npm run build:js"
   },
+  "bugs": {
+    "url": "https://github.com/VovanR/blah/issues"
+  },
+  "homepage": "https://github.com/VovanR/blah",
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [],
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
@@ -47,12 +53,6 @@
     "mocha-lcov-reporter": "1.0.0",
     "sinon": "^1.17.2",
     "uglifyjs": "^2.4.10",
-    "xo": "^0.11.2"
-  },
-  "bugs": {
-    "url": "https://github.com/VovanR/blah/issues"
-  },
-  "homepage": "https://github.com/VovanR/blah",
-  "license": "MIT",
-  "dependencies": {}
+    "xo": "^0.12.1"
+  }
 }
